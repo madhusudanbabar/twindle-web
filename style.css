@@ -254,8 +254,8 @@ body {
 }
 
 .footer__logo {
-  height: 50px;
-  width: 50px;
+  height: 5rem;
+  width: 5rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
