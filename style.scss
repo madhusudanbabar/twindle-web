@@ -40,15 +40,20 @@ body{
     margin-top: 5rem;
     font-size: 1.6rem;
     border: 1px solid gray;
-    border-radius: .5rem;
+    border-radius: 7.5rem;
     // border-radius: .5rem;
     appearance: none;
     text-align: center;
-    padding: .5em 2rem;
+    padding: .75em 2rem;
+    color: var(--color-primary);
 
     &:focus{
         outline: none;
         border-style: dashed;;
+    }
+
+    &::-webkit-input-placeholder{
+        color: var(--color-primary) !important;
     }
 }
 
@@ -58,7 +63,7 @@ body{
     color: white;
     background-color: var(--color-secondary);
     border: none;
-    border-radius: .5rem;
+    border-radius: 7.5rem;
     font-size: 2rem;
     margin-top: 1rem;
     box-shadow: 0px 1px 2px var(--color-secondary);
@@ -69,7 +74,7 @@ body{
         box-shadow: 0px 2px 2px var(--color-secondary);
         transform: translateY(-1px);
         background: white;
-        color: #d43b76;
+        color: var(--color-secondary);
     }
 }
 
@@ -84,6 +89,14 @@ body{
     padding: 0 2rem;
     font-size: 1.6rem;
     height: var(--logo-size);
+    border-bottom: var(--separator);
+    border-width: 2.5px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
 
     &__logo-box{
         height: var(--logo-size);
@@ -123,14 +136,25 @@ body{
 
 // HOME
 .home{
+    margin-top: var(--logo-size);
     background: linear-gradient(to bottom right,rgba(194, 97, 233, 0.2), rgba(76, 43, 243, 0.1)) , url(./cover.jpg);
     min-height: calc(100vh - var(--logo-size));
     background-repeat: no-repeat;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    
 
     border-bottom: var(--separator);
+
+    &__input{
+        background-color: rgba(255, 255, 255, 0.75);
+
+        &::-webkit-input-placeholder{
+            color: white;
+        }
+
+    }
 
     &__title{
         font-size: 7.5rem;
@@ -173,11 +197,21 @@ body{
     &__input{
         margin-top: 0rem;
         border-radius: 7.5rem;
+        appearance: none;
+        background-color: #618adb3b;
 
+        &::-webkit-input-placeholder{
+            color: var(--color-primary);
+        }
         &:focus{
             outline: none;
             border-style: dashed;;
         }
+    }
+
+    &__status{
+        text-align: center;
+        color: var(--color-primary);
     }
 
     &__cta{
