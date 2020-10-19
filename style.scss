@@ -76,6 +76,15 @@ body{
         background: white;
         color: var(--color-secondary);
     }
+    
+    &:active{
+        transform: translateY(0);
+    }
+
+    &:focus{
+        outline: none;
+        box-shadow: 0px 1px 2px var(--color-secondary);
+}
 }
 
 
@@ -237,8 +246,8 @@ body{
     }
 
     &__logo{
-        height: 5rem;
-        width: 5rem;
+        height: 3.5rem;
+        width: 3.5rem;
         object-fit: cover;
     }
 

@@ -80,6 +80,17 @@ body {
   color: var(--color-secondary);
 }
 
+*[class$="cta"]:active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+*[class$="cta"]:focus {
+  outline: none;
+  -webkit-box-shadow: 0px 1px 2px var(--color-secondary);
+          box-shadow: 0px 1px 2px var(--color-secondary);
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,8 +299,8 @@ body {
 }
 
 .footer__logo {
-  height: 5rem;
-  width: 5rem;
+  height: 3.5rem;
+  width: 3.5rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
